@@ -1,0 +1,148 @@
+
+        <h3 class="text-xl font-semibold">Input from Party Setup</h3>
+        <h4 class="text-lg font-semibold">Elemental Resonance Bonus:</h4>
+        <!-- Elemental Resonance Bonus -->
+        <div id="ferventFlames">
+          <span>Fervent Flames: +25% ATK</span>
+          <br />
+          <input
+            type="radio"
+            id="yesFerventFlames"
+            value="Yes"
+            v-model="ferventFlames"
+          />
+          <label for="yesFerventFlames">Yes</label>
+          <br />
+          <input
+            type="radio"
+            id="noFerventFlames"
+            value="No"
+            v-model="ferventFlames"
+          />
+          <label for="noFerventFlames">No</label>
+          <br />
+        </div>
+        <div id="shatteringIce">
+          <span>Shattering Ice: +15% Crit Rate</span>
+          <br />
+          <input
+            type="radio"
+            id="yesShatteringIce"
+            value="Yes"
+            v-model="shatteringIce"
+          />
+          <label for="yesShatteringIce">Yes</label>
+          <br />
+          <input
+            type="radio"
+            id="noShatteringIce"
+            value="No"
+            v-model="shatteringIce"
+          />
+          <label for="noShatteringIce">No</label>
+          <br />
+        </div>
+        <div id="enduringRock">
+          <span>Enduring Rock: +15% ATK</span>
+          <br />
+          <input
+            type="radio"
+            id="yesEnduringRock"
+            value="Yes"
+            v-model="enduringRock"
+          />
+          <label for="yesEnduringRock">Yes</label>
+          <br />
+          <input
+            type="radio"
+            id="noEnduringRock"
+            value="No"
+            v-model="enduringRock"
+          />
+          <label for="noEnduringRock">No</label>
+          <br />
+        </div>
+
+        <!-- Reaction Type -->
+        <h3 class="text-xl font-semibold">What Reaction Occured</h3>
+        <h4 class="text-lg font-semibold">Reaction Type:</h4>
+        <div>
+          <label for="meltReactionType">Melt:</label>
+          <input id="meltReactionType" type="text" v-model="meltReactionType" />
+        </div>
+        <div>
+          <label for="vaporizeReactionType">Vaporize:</label>
+          <input
+            id="vaporizeReactionType"
+            type="text"
+            v-model="vaporizeReactionType"
+          />
+        </div>
+        <div>
+          <label for="shatterReactionType">Shatter:</label>
+          <input
+            id="shatterReactionType"
+            type="text"
+            v-model="shatterReactionType"
+          />
+        </div>
+
+        <div>
+          <label for="overload">Overload:</label>
+          <input id="overload" type="text" v-model="overload" />
+        </div>
+        <div>
+          <label for="superconduct">Superconduct:</label>
+          <input id="superconduct" type="text" v-model="superconduct" />
+        </div>
+        <div>
+          <label for="electrocharge">Electrocharge:</label>
+          <input id="electrocharge" type="text" v-model="electrocharge" />
+        </div>
+
+        <div>
+          <label for="swirl">Swirl:</label>
+          <input id="swirl" type="text" v-model="swirl" />
+        </div>
+
+        <h3 class="text-xl font-semibold">Input from Artifact Set Bonuses</h3>
+        <div>
+          <label for="artifactSetBonusesAtk">ATK (%):</label>
+          <input
+            id="artifactSetBonusesAtk"
+            type="text"
+            v-model="artifactSetBonusesAtk"
+          />
+        </div>
+        <div>
+          <label for="artifactSetBonusesBurst">Burst (%):</label>
+          <input
+            id="artifactSetBonusesBurst"
+            type="text"
+            v-model="artifactSetBonusesBurst"
+          />
+        </div>
+
+        <h3 class="text-xl font-semibold">Input from Other Character Buffs</h3>
+        <div>
+          <label for="otherCharacterBuffsAtk">ATK (%):</label>
+          <input
+            id="otherCharacterBuffsAtk"
+            type="text"
+            v-model="otherCharacterBuffsAtk"
+          />
+        </div>
+        <div>
+          <label for="otherCharacterBuffsElementalMastery"
+            >Elemental Mastery (%):</label
+          >
+          <input
+            id="otherCharacterBuffsElementalMastery"
+            type="text"
+            v-model="otherCharacterBuffsElementalMastery"
+          />
+        </div>
+      </div>
+      <div class="flex flex-col w-1/2">
+        <h2 class="text-2xl text-center">Output:</h2>
+      </div>
