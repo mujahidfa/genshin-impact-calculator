@@ -182,6 +182,19 @@
           <h4 class="text-lg font-semibold">Average DMG =</h4>
           <p>{{ averageDMGBeforeReduction }}</p>
         </div>
+        <div class="flex justify-center space-x-4">
+          <router-link
+            to="/elemental-reaction-hit"
+            class="flex self-center px-8 py-4 mt-20 font-semibold text-white bg-green-500 hover:bg-green-700"
+          >
+            Next
+          </router-link>
+          <!-- <button
+            class="flex self-center px-8 py-4 mt-20 font-semibold text-white bg-gray-500 hover:bg-gray-700"
+          >
+            Save
+          </button> -->
+        </div>
       </section>
     </div>
   </div>
@@ -306,6 +319,12 @@ export default {
         alert("Please select an Attack Type and a Damage Type.");
         return;
       } else {
+        this.$store.state.normalDMGBeforeReduction = this.normalDMGBeforeReduction;
+        this.$store.state.critDMGBeforeReduction = this.critDMGBeforeReduction;
+        this.$store.state.averageDMGBeforeReduction = this.averageDMGBeforeReduction;
+        this.$store.state.critRate = this.critRate;
+        this.$store.state.critDMG = this.critDMG;
+
         this.isCalculated = true;
         return;
       }

@@ -53,7 +53,15 @@
 
         <!-- Input From Standard Hit -->
         <section>
-          <h3 class="text-xl font-semibold">Input From Standard Hit</h3>
+          <h3 class="text-xl font-semibold">
+            Input From
+            <router-link
+              to="/standard-hit"
+              class="text-green-700 hover:text-green-400"
+            >
+              Standard Hit
+            </router-link>
+          </h3>
           <div>
             <label for="normalDMGBeforeReduction">
               Normal DMG (before reduction):
@@ -104,6 +112,7 @@
           </div>
         </section>
 
+        <!-- Elemental Mastery -->
         <section class="my-4">
           <h3 class="text-xl font-semibold">
             Elemental Mastery
@@ -119,10 +128,10 @@
           </div>
         </section>
 
-        <!-- Input type of attack bonuses from weapons, artifact sets, etc -->
+        <!-- Input from Constellation and Artifact Bonus-->
         <section v-if="reactionType !== ''">
           <h3 class="text-xl font-semibold">
-            Input type of attack bonuses from weapons, artifact sets, etc
+            Input from Constellation and Artifact Bonus
           </h3>
           <div>
             <label for="constellationArtifactBonus">
@@ -175,6 +184,12 @@
           <h4 class="text-lg font-semibold">Amplified Average DMG =</h4>
           <p>{{ amplifiedAverageDMGBeforeReduction }}</p>
         </div>
+
+        <!-- <button
+          class="flex self-center px-8 py-4 mt-20 font-semibold text-white bg-gray-500 hover:bg-gray-700"
+        >
+          Save
+        </button> -->
       </section>
     </div>
   </div>
@@ -191,11 +206,11 @@ export default {
       triggerReactionElement: "",
 
       // Input From Standard Hit
-      normalDMGBeforeReduction: 1,
-      critDMGBeforeReduction: 1,
-      averageDMGBeforeReduction: 1,
-      critRate: 0,
-      critDMG: 0,
+      normalDMGBeforeReduction: this.$store.state.normalDMGBeforeReduction,
+      critDMGBeforeReduction: this.$store.state.critDMGBeforeReduction,
+      averageDMGBeforeReduction: this.$store.state.averageDMGBeforeReduction,
+      critRate: this.$store.state.critRate,
+      critDMG: this.$store.state.critDMG,
 
       elementalMastery: 0,
 
