@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="">
     <h1 class="pt-4 text-3xl font-bold text-center">
-      Genshin Impact Calculator
+      Genshin Impact DMG Calculator
     </h1>
     <div id="nav" class="p-4 font-bold text-center text-green-900">
       <router-link to="/" exact-active-class="text-green-500">Home</router-link>
