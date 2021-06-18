@@ -1,23 +1,27 @@
 <template>
-  <div id="app" class="flex flex-col py-8 x-20">
+  <div id="app" class="flex flex-col px-20 py-8">
     <h1 class="text-3xl font-semibold text-center">
       Standard Hit - (From Abilities, Elemental Skill and Burst)
     </h1>
-    <div class="flex flex-row justify-center divide-x">
+    <div
+      class="flex flex-row justify-center bg-gray-800 bg-opacity-75 divide-x"
+    >
       <!-- Input section -->
       <section class="flex flex-col justify-start w-1/2 px-4 space-y-2">
         <h2 class="text-2xl text-center">Input:</h2>
 
         <!-- Input from Talent -->
-        <section>
+        <section class="text-white">
           <h3 class="text-xl font-semibold">Input from Talent</h3>
-          <div class="flex">
-            <label for="attackType">Choose an Attack Type:</label>
+          <div class="flex justify-between">
+            <label for="attackType" class="font-bold"
+              >Choose an Attack Type:</label
+            >
             <select
               name="attackType"
               id="attackType"
               v-model="attackType"
-              class="border"
+              class="text-green-900 border"
             >
               <option disabled value="">Please select one</option>
               <option
@@ -29,18 +33,19 @@
               </option>
             </select>
           </div>
-          <div v-if="attackType !== ''">
+          <div v-if="attackType !== ''" class="flex justify-between">
             <label for="skillMultiplier">
               Skill Multiplier for {{ attackType }} (%):
             </label>
             <input
               id="skillMultiplier"
-              type="number"
+              type="text"
               min="0"
+              v-mask="'###%'"
               v-model="skillMultiplier"
             />
           </div>
-          <div class="flex">
+          <div class="flex justify-between">
             <label for="damageType">Choose a Damage Type:</label>
             <select
               name="damageType"
@@ -337,15 +342,6 @@ export default {
 </script>
 
 <style scoped>
-body {
-  /* background-image: url("./assets/background.jpeg"); */
-  /* background-repeat: no-repeat; */
-  /* background: url("./assets/background.jpeg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; */
-}
 input {
   @apply border border-gray-400;
 }
